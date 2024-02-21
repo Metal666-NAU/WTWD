@@ -1,5 +1,5 @@
 :root {
-	/*Catppuccin colors*/
+	/* Catppuccin colors */
 	--crust: #11111b;
 	--mantle: #181825;
 	--base: #1e1e2e;
@@ -28,6 +28,18 @@
 	background-clip: text;
 	color: transparent;
 	padding: 10px;
+}
+
+#nav {
+	display: flex;
+	background-color: var(--mantle);
+	padding: 10px;
+	border: 4px solid var(--base);
+}
+
+#nav > li {
+	list-style-type: square;
+	padding: 0px 10px;
 }
 
 #nau-logo-container {
@@ -76,6 +88,55 @@ p::first-letter {
 
 .columns {
 	display: flex;
+}
+
+ul {
+	list-style-position: inside;
+	margin: 10px;
+}
+
+ul > ul {
+	list-style-type: square;
+	list-style-position: outside;
+}
+
+ul > ul > ul {
+	/* Source: https://www.flaticon.com/free-icon/cat_616430 */
+	list-style-image: url("../img/list-marker-cat.png");
+}
+
+ol > ol {
+	list-style: none lower-roman inside;
+}
+
+ol > ol > li {
+	border: 2px dashed var(--sky);
+}
+
+div.fake-list > p {
+	display: list-item;
+}
+
+table {
+	width: 100%;
+	background-color: var(--base);
+	border-radius: 0px 0px 10px 10px;
+	padding: 10px;
+	border: 2px solid var(--red);
+	border-spacing: 5px;
+}
+
+caption {
+	padding: 5px;
+	color: var(--crust);
+	background-color: var(--red);
+	border-radius: 10px 10px 0px 0px;
+}
+
+th,
+td {
+	border: 1px solid var(--flamingo);
+	padding: 2px;
 }
 
 @keyframes scroll-image {
