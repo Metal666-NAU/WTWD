@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Media</title>
+		<link
+			rel="icon"
+			href="data:;base64,iVBORw0KGgo="
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../css/style.css"
+		/>
+		<style>
+			a {
+				color: var(--mauve);
+			}
+
+			a:visited {
+				color: var(--maroon);
+			}
+
+			a:hover {
+				color: var(--green) !important;
+			}
+		</style>
+	</head>
+	<body style="background-color: var(--crust); color: var(--text)">
+		<ul id="nav">
+			NAVIGATION:
+			<li><a href="/index.html">Home</a></li>
+			<li><a href="/pages/form.html">Form</a></li>
+		</ul>
+		<div id="content">
+			<h1>MEDIA</h1>
+			<div>
+				<p>Image:</p>
+				<img
+					src="https://i.imgur.com/fSRs4CQ.jpg"
+					referrerpolicy="no-referrer"
+					alt="chonky cat drinking from a milk carton"
+					title="mmm, malk"
+					width="400px"
+					hspace="20px"
+				/>
+				<p>Audio:</p>
+				<audio
+					src="/audio/Cute-cat-meow-sound.mp3"
+					controls
+					preload="metadata"
+				>
+					&lt;audio&gt; is not supported in your browser!
+				</audio>
+				<p>Video:</p>
+				<video
+					controls
+					height="300px"
+					muted
+					loop
+					poster="https://www.clipartbest.com/cliparts/pT5/g76/pT5g76bTB.png"
+					preload="none"
+				>
+					<source src="/videos/cat.mp4" />
+					&lt;video&gt; is not supported in your browser!
+				</video>
+				<p>Embed:</p>
+				<embed
+					src="/index.html"
+					type="text/html"
+					width="800px"
+					height="500px"
+				/>
+				<p>Object:</p>
+				<object data="/videos/cat.mp4">
+					<param
+						name="quality"
+						value="low"
+					/>
+					<param
+						name="volume"
+						value="50%"
+					/>
+				</object>
+				<p>Map:</p>
+				<div>
+					<img
+						src="/img/map.png"
+						usemap="#map"
+						width="500px"
+					/>
+					<map name="map">
+						<area
+							href="https://en.wikipedia.org/wiki/Star"
+							shape="rect"
+							coords="35,25,135,95"
+							title="Star"
+						/>
+						<area
+							href="https://en.wikipedia.org/wiki/Pentagon"
+							shape="rect"
+							coords="190,105,295,200"
+							title="Pentagon"
+						/>
+						<area
+							href="https://en.wikipedia.org/wiki/Hexagon"
+							shape="circle"
+							coords="390,75,45"
+							title="Hexagon"
+						/>
+					</map>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

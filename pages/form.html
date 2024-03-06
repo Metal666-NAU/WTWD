@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form</title>
+		<link
+			rel="icon"
+			href="data:;base64,iVBORw0KGgo="
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../css/style.css"
+		/>
+		<script src="../js/form.js"></script>
+		<style>
+			a {
+				color: var(--mauve);
+			}
+
+			a:visited {
+				color: var(--maroon);
+			}
+
+			a:hover {
+				color: var(--green) !important;
+			}
+		</style>
+	</head>
+	<body style="background-color: var(--crust); color: var(--text)">
+		<ul id="nav">
+			NAVIGATION:
+			<li><a href="/index.html">Home</a></li>
+			<li><a href="/pages/media.html">Media</a></li>
+		</ul>
+		<div
+			id="content"
+			class="forms"
+		>
+			<form
+				id="form-main"
+				name="main-form"
+				method="get"
+			>
+				<div class="form-content">
+					<p class="form-header">
+						Form
+						<span> (method: <i id="form-main-method">get</i>)</span>
+					</p>
+					<div>
+						Single Line:
+						<input
+							name="text-single-line"
+							type="text"
+							value="Excepteur ex sit sunt nostrud id excepteur ex qui voluptate aute."
+						/>
+					</div>
+					<div>
+						Multiline:
+						<textarea name="text-multiline">
+Dolor minim cillum minim exercitation duis dolor elit excepteur elit eu ea nostrud laborum.</textarea
+						>
+					</div>
+					<div>
+						Datalist:
+						<input
+							name="text-datalist"
+							list="form-main-datalist"
+						/>
+						<datalist id="form-main-datalist">
+							<option value="Option 1"></option>
+							<option value="Option 2"></option>
+						</datalist>
+					</div>
+					<div>
+						Password:
+						<input
+							name="password"
+							type="password"
+						/>
+					</div>
+					<div>
+						Email:
+						<input
+							name="email"
+							type="email"
+						/>
+					</div>
+					<div>
+						Title:
+						<input title="I'm a title!" />
+					</div>
+					<div>
+						Date & Time:
+						<input
+							name="date"
+							type="date"
+						/>
+						<input
+							name="time"
+							type="time"
+						/>
+						<input
+							name="datetime-local"
+							type="datetime-local"
+						/>
+					</div>
+					<div>
+						<span>
+							Checkbox:
+							<input
+								name="checkbox"
+								type="checkbox"
+							/>
+						</span>
+					</div>
+					<div>
+						Radio Buttons:
+						<div class="form-content">
+							<span>
+								Option 1:
+								<input
+									name="radio"
+									type="radio"
+									value="1"
+									accesskey="1"
+								/>
+							</span>
+							<span>
+								Option 2:
+								<input
+									name="radio"
+									type="radio"
+									value="2"
+									accesskey="2"
+								/>
+							</span>
+							<span>
+								Option 3:
+								<input
+									name="radio"
+									type="radio"
+									value="3"
+									accesskey="3"
+									checked
+								/>
+							</span>
+						</div>
+					</div>
+					<div>
+						Color:
+						<input
+							name="color"
+							type="color"
+							value="#7722cc"
+						/>
+					</div>
+					<div>
+						Select Single:
+						<select name="select-single">
+							<option value="1">Option 1</option>
+							<option
+								value="2"
+								selected
+							>
+								Option 2
+							</option>
+							<option value="3">Option 3</option>
+						</select>
+					</div>
+					<div>
+						Select Multiple:
+						<select
+							name="select-multiple"
+							multiple
+						>
+							<option value="1">Option 1</option>
+							<option
+								value="2"
+								selected
+							>
+								Option 2
+							</option>
+							<option
+								value="3"
+								selected
+							>
+								Option 3
+							</option>
+						</select>
+					</div>
+					<div>
+						Disabled:
+						<input disabled />
+					</div>
+					<div>
+						Readonly:
+						<input
+							readonly
+							value="haha, can't edit me"
+						/>
+					</div>
+					<fieldset>
+						Buttons:
+						<span>
+							<input
+								type="submit"
+								value="Send!"
+							/>
+							<input
+								type="reset"
+								value="Clear form?"
+							/>
+						</span>
+						<span>
+							<button
+								type="button"
+								onclick="clearUrl()"
+							>
+								Clear URL
+							</button>
+							<input
+								type="button"
+								onclick="changeFormMethod()"
+								value="Change method"
+							/>
+						</span>
+					</fieldset>
+				</div>
+			</form>
+			<form
+				id="form-file"
+				name="file-form"
+				method="post"
+				enctype="multipart/form-data"
+			>
+				<div class="form-content">
+					<p class="form-header">Form (file)</p>
+					<div>
+						File:
+						<input
+							name="file"
+							type="file"
+							accept=".html"
+						/>
+					</div>
+					<div>
+						<input
+							name="image"
+							type="image"
+							src="https://www.clker.com/cliparts/M/E/Q/Q/a/K/button-send-md.png"
+						/>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

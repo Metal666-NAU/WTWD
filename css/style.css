@@ -52,21 +52,58 @@
 	animation: scroll-image 6s linear infinite;
 }
 
+form {
+	display: flex;
+	justify-content: center;
+	background-color: var(--mantle);
+	padding: 15px;
+	margin: 10px 0px;
+}
+
+.form-content,
+#content p {
+	background-color: var(--base);
+	border-radius: 10px;
+}
+
+.form-content,
+.form-content > div,
+.form-content > fieldset {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-content {
+	padding: 15px;
+}
+
+.form-content > div {
+	padding: 5px 0px;
+}
+
+p.form-header {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
 #content {
 	background-color: var(--mantle);
 	padding: 10px;
 }
 
 #content p {
-	background-color: var(--base);
 	font-style: italic;
 	padding: 10px;
-	border-radius: 10px;
 	margin: 5px;
 }
 
 #content > p {
 	font-style: initial;
+}
+
+#content.forms {
+	display: flex;
+	justify-content: center;
 }
 
 p::first-letter {
