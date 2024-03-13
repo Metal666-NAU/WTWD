@@ -139,7 +139,7 @@ ul > ul {
 
 ul > ul > ul {
 	/* Source: https://www.flaticon.com/free-icon/cat_616430 */
-	list-style-image: url("../img/list-marker-cat.png");
+	list-style-image: url("/img/list-marker-cat.png");
 }
 
 ol > ol {

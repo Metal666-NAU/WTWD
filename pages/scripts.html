@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scripts</title>
+		<link
+			rel="icon"
+			href="data:;base64,iVBORw0KGgo="
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="/css/style.css"
+		/>
+		<style>
+			a {
+				color: var(--mauve);
+			}
+
+			a:visited {
+				color: var(--maroon);
+			}
+
+			a:hover {
+				color: var(--green) !important;
+			}
+		</style>
+		<style>
+			#content > div {
+				display: flex;
+				flex-direction: column;
+			}
+		</style>
+		<script>
+			// VARIABLES
+			const numberIntDec = 9;
+			const numberIntHex = 0xa5;
+			const numberFloat = 5.3;
+
+			const stringDoubleQuotes = "string";
+			const stringSingleQuotes = "string";
+			const stringTemplate = `string`;
+			const stringObject = new String("string");
+
+			const boolean = true;
+
+			const _null = null;
+			const $undefined = undefined;
+			const nan = NaN;
+
+			const object = {
+				a: 1,
+				b: 2,
+			};
+
+			// - Arrays
+			const arrayArr0 = new Array();
+			const arrayArr2 = new Array(2);
+			const arrayArr = new Array("1", 2, null);
+			const array = [
+				numberIntDec,
+				stringDoubleQuotes,
+				boolean,
+				_null,
+				object,
+			];
+
+			arrayArr2[1] = 9;
+			arrayArr2[0] = 10;
+
+			const length = arrayArr2.length;
+			const pop = arrayArr2.pop();
+			arrayArr2.push(pop);
+			const shift = arrayArr2.shift();
+			arrayArr2.unshift(shift);
+
+			const join = arrayArr.join(":");
+			const concat = arrayArr.concat(arrayArr);
+
+			arrayArr.reverse();
+			arrayArr2.sort();
+
+			const slice = array.slice(3, 6);
+
+			// OPERATORS
+			// - Arithmetic
+			1 + 1;
+			1 - 1;
+			1 * 1;
+			1 / 1;
+			1 % 1;
+			1 ** 1;
+			-1;
+			+"1";
+
+			// - Logical
+			true && true;
+			true || false;
+			!true;
+
+			// - Bitwise
+			1 & 1;
+			1 | 1;
+			1 ^ 1;
+			~1;
+			1 << 1;
+			1 >> 1;
+			1 >>> 1;
+
+			// - String
+			"1" + "2";
+
+			// - Assignment
+			/*
+				a = a x b
+				   ↓
+				a x= b
+			*/
+
+			// - Comparison
+			1 == 1;
+			1 === 1;
+			1 != 1;
+			1 !== 1;
+			1 > 1;
+			1 < 1;
+			1 >= 1;
+			1 <= 1;
+
+			// - Ternary
+			true ? 1 : 2;
+
+			// CONTROL FLOW
+			for (let i = 0; i < 5; i++) {}
+
+			for (let index = 0; index < array.length; index++) {
+				const element = array[index];
+			}
+
+			for (let index = array.length - 1; index >= 0; index--) {
+				const element = array[index];
+			}
+
+			for (const element of array) {
+			}
+
+			for (const key in object) {
+				const element = object[key];
+			}
+
+			while (false) {}
+
+			do {} while (false);
+
+			switch (boolean) {
+				case true:
+					break;
+
+				case false: {
+				}
+
+				default:
+					break;
+			}
+
+			if (true) {
+			}
+
+			if (false) {
+			} else {
+			}
+
+			// NEW EXPRESSION
+			function Obj(num) {
+				this.num = num;
+			}
+
+			const obj = new Obj(123);
+			obj.num;
+
+			// FUNCTIONS
+			function func1(param) {}
+
+			const func2 = function (param) {
+				return;
+			};
+			const func3 = function func3_1(param) {
+				return func3_1;
+			};
+			const func4 = (param) => param;
+			const funcObj = {
+				func5() {},
+			};
+		</script>
+	</head>
+	<body style="background-color: var(--crust); color: var(--text)">
+		<ul id="nav">
+			NAVIGATION:
+			<li><a href="/index.html">Home</a></li>
+			<li><a href="/pages/form.html">Form</a></li>
+			<li><a href="/pages/media.html">Media</a></li>
+		</ul>
+		<div id="content">
+			<div>
+				<p>Button event handlers:</p>
+				<button onclick="alert('Alert!')">Show alert</button>
+				<button onmousedown="console.log(prompt('Prompt:'))">
+					Show prompt
+				</button>
+				<button onmouseup="console.log(confirm('Confirm?'))">
+					Show confirmation
+				</button>
+			</div>
+			<div>
+				<p>Text selection event handler:</p>
+				<input id="textInput" />
+				<span id="textInputSelection"></span>
+				<span id="textInputSelectionStart"></span>
+				<span id="textInputSelectionEnd"></span>
+			</div>
+			<div>
+				<p>Mouse position:</p>
+				<span id="mousePositionXLabel"></span>
+				<span id="mousePositionYLabel"></span>
+			</div>
+		</div>
+		<script src="/js/scripts.js"></script>
+	</body>
+</html>

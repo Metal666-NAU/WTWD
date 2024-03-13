@@ -9,9 +9,9 @@
 		<link
 			rel="stylesheet"
 			type="text/css"
-			href="../css/style.css"
+			href="/css/style.css"
 		/>
-		<script src="../js/form.js"></script>
+		<script src="/js/form.js"></script>
 		<style>
 			a {
 				color: var(--mauve);
@@ -31,6 +31,7 @@
 			NAVIGATION:
 			<li><a href="/index.html">Home</a></li>
 			<li><a href="/pages/media.html">Media</a></li>
+			<li><a href="/pages/scripts.html">Scripts</a></li>
 		</ul>
 		<div
 			id="content"
@@ -67,8 +68,8 @@ Dolor minim cillum minim exercitation duis dolor elit excepteur elit eu ea nostr
 							list="form-main-datalist"
 						/>
 						<datalist id="form-main-datalist">
-							<option value="Option 1"></option>
-							<option value="Option 2"></option>
+							<option value="abc"></option>
+							<option value="xyz"></option>
 						</datalist>
 					</div>
 					<div>
@@ -105,18 +106,19 @@ Dolor minim cillum minim exercitation duis dolor elit excepteur elit eu ea nostr
 						/>
 					</div>
 					<div>
-						<span>
+						<label>
 							Checkbox:
 							<input
 								name="checkbox"
 								type="checkbox"
+								value="123"
 							/>
-						</span>
+						</label>
 					</div>
 					<div>
 						Radio Buttons:
 						<div class="form-content">
-							<span>
+							<label>
 								Option 1:
 								<input
 									name="radio"
@@ -124,8 +126,8 @@ Dolor minim cillum minim exercitation duis dolor elit excepteur elit eu ea nostr
 									value="1"
 									accesskey="1"
 								/>
-							</span>
-							<span>
+							</label>
+							<label>
 								Option 2:
 								<input
 									name="radio"
@@ -133,8 +135,8 @@ Dolor minim cillum minim exercitation duis dolor elit excepteur elit eu ea nostr
 									value="2"
 									accesskey="2"
 								/>
-							</span>
-							<span>
+							</label>
+							<label>
 								Option 3:
 								<input
 									name="radio"
@@ -143,16 +145,18 @@ Dolor minim cillum minim exercitation duis dolor elit excepteur elit eu ea nostr
 									accesskey="3"
 									checked
 								/>
-							</span>
+							</label>
 						</div>
 					</div>
 					<div>
-						Color:
-						<input
-							name="color"
-							type="color"
-							value="#7722cc"
-						/>
+						<label
+							>Color:
+							<input
+								name="color"
+								type="color"
+								value="#7722cc"
+							/>
+						</label>
 					</div>
 					<div>
 						Select Single:
@@ -173,19 +177,29 @@ Dolor minim cillum minim exercitation duis dolor elit excepteur elit eu ea nostr
 							name="select-multiple"
 							multiple
 						>
-							<option value="1">Option 1</option>
-							<option
-								value="2"
-								selected
-							>
-								Option 2
-							</option>
-							<option
-								value="3"
-								selected
-							>
-								Option 3
-							</option>
+							<optgroup label="1-2">
+								<option value="1">Option 1</option>
+								<option
+									value="2"
+									selected
+								>
+									Option 2
+								</option>
+							</optgroup>
+							<optgroup label="3-4">
+								<option
+									value="3"
+									selected
+								>
+									Option 3
+								</option>
+								<option
+									value="4"
+									selected
+								>
+									Option 4
+								</option>
+							</optgroup>
 						</select>
 					</div>
 					<div>
@@ -200,7 +214,7 @@ Dolor minim cillum minim exercitation duis dolor elit excepteur elit eu ea nostr
 						/>
 					</div>
 					<fieldset>
-						Buttons:
+						<legend>Buttons</legend>
 						<span>
 							<input
 								type="submit"
